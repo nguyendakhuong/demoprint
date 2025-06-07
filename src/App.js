@@ -172,19 +172,14 @@ function App() {
             <div class="content-html">${editDescription}</div>
           </section>
         </main>
-
-        <main class="page-break">
           <section>
             <div class="section-label">Kết quả</div>
             <div class="content-html">${editResult}</div>
           </section>
-
           <section>
             <div class="section-label">Khuyến nghị</div>
             <div class="content-html">${editRecommendation}</div>
           </section>
-        </main>
-
         <footer>Footer</footer>
       </body>
     </html>

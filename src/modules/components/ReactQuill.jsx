@@ -45,7 +45,7 @@ const modules = {
       ["blockquote", "code-block"],
       ["link", "image", "video"],
       ["clean"],
-      ["table"], // nút bảng để thao tác bảng (cần thử nếu tableUI hỗ trợ)
+      // ["table"],
     ],
   },
 
@@ -53,7 +53,7 @@ const modules = {
   resize: {
     modules: ["Resize", "DisplaySize", "Toolbar"], // resize ảnh
   },
-  tableUI: true, // bảng
+  // tableUI: true, // bảng
 };
 
 const formats = [
