@@ -1,0 +1,10 @@
+.ql-table-ui {
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.ql-table-ui button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
