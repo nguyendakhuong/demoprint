@@ -120,7 +120,6 @@ function App() {
             line-height: 1.5;
             font-size: 12pt;
             color: #333;
-            
           }
           img {
             max-width: 100%;
@@ -142,6 +141,19 @@ function App() {
             padding: 8px;
             text-align: left;
           }
+            .__se__float-left {
+      float: left !important;
+      margin: 0 15px 15px 0 !important;
+      max-width: 40% !important;
+      height: auto !important;
+    }
+    .__se__float-none {
+      float: none !important;
+      display: block;
+      margin: 0 auto 20px auto;
+      max-width: 70% !important;
+      height: auto !important;
+    }
         </style>
       </head>
       <body>
