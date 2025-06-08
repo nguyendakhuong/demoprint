@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import CustomEditor from "./modules/components/ReactQuill";
 import ModalAddItem from "./modules/modal/ModalAddItem";
+import CustomSunEditor from "./modules/components/CustomSunEditor";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -99,26 +99,6 @@ function App() {
             height: 297mm;
             box-sizing: border-box;
           }
-          /* Header chỉ nằm ở phần đầu, không fixed */
-          header {
-            text-align: center;
-            font-weight: bold;
-            font-size: 18pt;
-            padding: 10px 0;
-            border-bottom: 1px solid #333;
-            background: white;
-          }
-          /* Footer cuối cùng */
-          footer {
-            text-align: center;
-            font-size: 10pt;
-            color: #666;
-            padding: 10px 0;
-            border-top: 1px solid #ccc;
-            background: white;
-            page-break-after: avoid;
-          }
-         
           .page-break {
             page-break-before: always;
           }
@@ -140,6 +120,7 @@ function App() {
             line-height: 1.5;
             font-size: 12pt;
             color: #333;
+            
           }
           img {
             max-width: 100%;
@@ -164,23 +145,17 @@ function App() {
         </style>
       </head>
       <body>
-        <header>Header</header>
         <main>
-          <h1>${editTitle || "Không có tiêu đề"}</h1>
           <section>
-            <div class="section-label">Mô tả</div>
             <div class="content-html">${editDescription}</div>
           </section>
         </main>
           <section>
-            <div class="section-label">Kết quả</div>
             <div class="content-html">${editResult}</div>
           </section>
           <section>
-            <div class="section-label">Khuyến nghị</div>
             <div class="content-html">${editRecommendation}</div>
           </section>
-        <footer>Footer</footer>
       </body>
     </html>
   `);
@@ -250,22 +225,19 @@ function App() {
                 border: "1px solid #ccc",
               }}
             />
-
             <label>Mô tả</label>
-            <CustomEditor
+            <CustomSunEditor
               value={editDescription}
               onChange={setEditDescription}
             />
-
-            <label>Kết quả</label>
-            <CustomEditor value={editResult} onChange={setEditResult} />
-
+            ;<label>Kết quả</label>
+            <CustomSunEditor value={editResult} onChange={setEditResult} />;
             <label>Khuyến nghị</label>
-            <CustomEditor
+            <CustomSunEditor
               value={editRecommendation}
               onChange={setEditRecommendation}
             />
-
+            ;
             <button
               onClick={handleSaveEdit}
               style={{
@@ -282,7 +254,6 @@ function App() {
             >
               Lưu thay đổi
             </button>
-
             <button
               onClick={handlePrint}
               style={{

@@ -20,8 +20,11 @@
     "react-draft-wysiwyg": "^1.15.0",
     "react-quill": "^2.0.0",
     "react-scripts": "5.0.1",
+    "react-to-print": "^3.1.0",
     "sass": "^1.89.1",
     "scss": "^0.2.4",
+    "suneditor": "^2.47.5",
+    "suneditor-react": "^3.6.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
